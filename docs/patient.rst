@@ -1,3 +1,5 @@
+.. _patient_module:
+
 patient module
 ==============
 

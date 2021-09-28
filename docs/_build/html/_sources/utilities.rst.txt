@@ -1,3 +1,5 @@
+.. _utilities_module:
+
 utilities module
 ================
 

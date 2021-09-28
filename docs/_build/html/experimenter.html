@@ -35,11 +35,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">experimenter module</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_structure.html">Project structure</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -65,13 +67,14 @@
            <div itemprop="articleBody">
              
   <section id="module-experimenter">
-<span id="experimenter-module"></span><h1>experimenter module<a class="headerlink" href="#module-experimenter" title="Permalink to this headline"></a></h1>
-<p>Docstring for the experimenter.py module.</p>
+<span id="id1"></span><span id="experimenter-module"></span><h1>experimenter module<a class="headerlink" href="#module-experimenter" title="Permalink to this headline"></a></h1>
 <p>This module runs experiments. This involves:</p>
 <blockquote>
-<div><p>– Initiating simulation trials. 
-– Collecting simulation results. 
-– Passing experiment results to plotter object to plot.</p>
+<div><ul class="simple">
+<li><p>Initiating simulation trials.</p></li>
+<li><p>Collecting simulation results.</p></li>
+<li><p>Passing experiment results to plotter object to plot.</p></li>
+</ul>
 </div></blockquote>
 <dl class="py class">
 <dt class="sig sig-object py" id="experimenter.Experimenter">
@@ -107,7 +110,7 @@ the median, lower bound and upper bounds for the statistics of interest.</p>
 <dt class="sig sig-object py" id="experimenter.Experimenter.plot_experiment">
 <span class="sig-name descname"><span class="pre">plot_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotting_parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#experimenter.Experimenter.plot_experiment" title="Permalink to this definition"></a></dt>
 <dd><p>Plot results of experiment.</p>
-<p>This method instantiates the Plotter object and proceeds to plot 
+<p>This method instantiates the Plotter object and proceeds to plot
 the results of the experiment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -149,7 +152,7 @@ to change something in the simulation and receive helpful error messages…</p>
 <dt class="sig sig-object py" id="experimenter.get_result_async">
 <span class="sig-prename descclassname"><span class="pre">experimenter.</span></span><span class="sig-name descname"><span class="pre">get_result_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation_result</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#experimenter.get_result_async" title="Permalink to this definition"></a></dt>
 <dd><p>Append simulation trial results to experiment results.</p>
-<p>This function appends the results from the simulation to the experiment results 
+<p>This function appends the results from the simulation to the experiment results
 dictionary for later use.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -165,7 +168,7 @@ dictionary for later use.</p>
 <dt class="sig sig-object py" id="experimenter.get_result_standard">
 <span class="sig-prename descclassname"><span class="pre">experimenter.</span></span><span class="sig-name descname"><span class="pre">get_result_standard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_results</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simulation_result</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#experimenter.get_result_standard" title="Permalink to this definition"></a></dt>
 <dd><p>Append simulation trial results to experiment results.</p>
-<p>This function appends the results from the simulation to the experiment results 
+<p>This function appends the results from the simulation to the experiment results
 dictionary for later use.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>

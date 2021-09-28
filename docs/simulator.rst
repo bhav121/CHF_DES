@@ -1,3 +1,5 @@
+.. _simulator_module:
+
 simulator module
 ================
 

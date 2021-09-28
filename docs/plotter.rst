@@ -1,3 +1,5 @@
+.. _plotter_module:
+
 plotter module
 ==============
 

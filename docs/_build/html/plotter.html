@@ -35,11 +35,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">plotter module</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_structure.html">Project structure</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -65,8 +67,7 @@
            <div itemprop="articleBody">
              
   <section id="module-plotter">
-<span id="plotter-module"></span><h1>plotter module<a class="headerlink" href="#module-plotter" title="Permalink to this headline"></a></h1>
-<p>Docstring for the plotter.py module.</p>
+<span id="id1"></span><span id="plotter-module"></span><h1>plotter module<a class="headerlink" href="#module-plotter" title="Permalink to this headline"></a></h1>
 <p>This module plots the results of an experiment.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="plotter.Plotter">
@@ -141,7 +142,7 @@
 <span class="sig-name descname"><span class="pre">plot_deaths_separate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">death_location</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_deaths_separate" title="Permalink to this definition"></a></dt>
 <dd><p>Plot patient deaths at specific location in the system.</p>
 <p>This method plots patient deaths in either the community, the outpatient or inpatient queue.
-It also plots the average age or average NT pro BNP of patients in the queue as 
+It also plots the average age or average NT pro BNP of patients in the queue as
 requested.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -191,7 +192,7 @@ or average NT pro BNP of patients admitted to hospital.</p>
 <dt class="sig sig-object py" id="plotter.Plotter.plot_hospital_admissions_from_outpatient_queue">
 <span class="sig-name descname"><span class="pre">plot_hospital_admissions_from_outpatient_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_hospital_admissions_from_outpatient_queue" title="Permalink to this definition"></a></dt>
 <dd><p>Plots hospital admissions from outpatient queue.</p>
-<p>This method plots the total hospital admissions from the outpatient queue and 
+<p>This method plots the total hospital admissions from the outpatient queue and
 the proportion of all hospital admissions that come from the outpatient queue.
 It also plots the average age or average NT pro BNP of patients admitted to hospital.</p>
 <dl class="field-list">
@@ -216,7 +217,7 @@ It also plots the average age or average NT pro BNP of patients admitted to hosp
 <dt class="sig sig-object py" id="plotter.Plotter.plot_queue_lengths_combined">
 <span class="sig-name descname"><span class="pre">plot_queue_lengths_combined</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_queue_lengths_combined" title="Permalink to this definition"></a></dt>
 <dd><p>Plots echo queue lengths.</p>
-<p>This method plots the outpatient and inpatient echocardiogram queue lengths 
+<p>This method plots the outpatient and inpatient echocardiogram queue lengths
 over time on the same plot.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -239,7 +240,7 @@ over time on the same plot.</p>
 <span class="sig-name descname"><span class="pre">plot_queue_lengths_seperate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue_location</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_queue_lengths_seperate" title="Permalink to this definition"></a></dt>
 <dd><p>Plots echo queue lengths.</p>
 <p>This method plots either the outpatient or inpatient echocardiogram queue lengths.
-It also plots the average age or average NT pro BNP of patients in the queue as 
+It also plots the average age or average NT pro BNP of patients in the queue as
 requested.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -265,7 +266,7 @@ requested.</p>
 <dt class="sig sig-object py" id="plotter.Plotter.plot_queue_wait_times">
 <span class="sig-name descname"><span class="pre">plot_queue_wait_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_queue_wait_times" title="Permalink to this definition"></a></dt>
 <dd><p>Plots echo queue wait times.</p>
-<p>This method plots the time that patients have been waiting in the outpatient 
+<p>This method plots the time that patients have been waiting in the outpatient
 and inpatient queues.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -287,7 +288,7 @@ and inpatient queues.</p>
 <dt class="sig sig-object py" id="plotter.Plotter.plot_wait_times">
 <span class="sig-name descname"><span class="pre">plot_wait_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_wait_times" title="Permalink to this definition"></a></dt>
 <dd><p>Plots echo queue wait times.</p>
-<p>This method plots the time that patients waited for outpatient and inpatient 
+<p>This method plots the time that patients waited for outpatient and inpatient
 echocardiograms.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>

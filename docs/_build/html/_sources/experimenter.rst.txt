@@ -1,3 +1,5 @@
+.. _experimenter_module:
+
 experimenter module
 ===================
 
