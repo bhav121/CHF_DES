@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>utilities module &mdash; chf_des na documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> chf_des
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">utilities module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">chf_des</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>utilities module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/utilities.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-utilities">
+<span id="utilities-module"></span><h1>utilities module<a class="headerlink" href="#module-utilities" title="Permalink to this headline"></a></h1>
+<p>Docstring for the utilities.py module.</p>
+<p>This module contains utility functions for all other modules.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.add_intervention_lines">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">add_intervention_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intervention_rule_sets</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intervention_colour_dictionary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">matplotlib.pyplot.axes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#utilities.add_intervention_lines" title="Permalink to this definition"></a></dt>
+<dd><p>Add intervention lines to the plot.</p>
+<p>This function adds the intervention lines to the plot. These could be 
+the lockdown lines and any interventions like increases in capacity. 
+By lines, we mean lines on the plot that indicate the time interval over
+which the intervention applies.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>intervention_rule_sets</strong><span class="classifier">list</span></dt><dd><blockquote>
+<div><p>List containing the intervention rule sets dictionaries.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>intervention_colour_dictionary<span class="classifier">list</span></dt><dd><p>List containing the intervention colour dictionaries. These specify
+what colour to use for the intervention lines.</p>
+</dd>
+<dt>axes: plt.axes,</dt><dd><p>Axes with data plotted.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>plot_data</strong><span class="classifier">list</span></dt><dd><p>List containing the axes, lines and labels.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.add_median_and_confidence_intervals">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">add_median_and_confidence_intervals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence_interval</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#utilities.add_median_and_confidence_intervals" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the mean and confidence intervals across simulation trials.</p>
+<p>This function computes the mean and confidence intervals for the simulations.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><blockquote>
+<div><p>Merged dataframe containing the results from all the simulations.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>confidence_interval<span class="classifier">float</span></dt><dd><p>Percent to use for confidence interval computation.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Merged dataframe with statistics computed and stored.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.check_datetime_range_membership">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">check_datetime_range_membership</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">datetime.datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">datetime.datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">datetime.datetime</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#utilities.check_datetime_range_membership" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if a datetime is within a specified range.</p>
+<p>This function is used by get_current_rule_set to determine the 
+current rule set for the simulation parameters.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>start_datetime</strong><span class="classifier">datetime.datetime</span></dt><dd><blockquote>
+<div><p>Start datetime of datetime range.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>end_datetime<span class="classifier">datetime.datetime </span></dt><dd><p>End datetime of datetime range.</p>
+</dd>
+<dt>current_datetime<span class="classifier">datetime.datetime </span></dt><dd><p>Current datetime.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>datetime_in_range</strong><span class="classifier">bool</span></dt><dd><p>Boolean identifying if datetime is within datetime range.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.clean_data">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">clean_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#utilities.clean_data" title="Permalink to this definition"></a></dt>
+<dd><p>Clean data for plotting.</p>
+<p>This function cleans the data for plotting. It currently just replaces
+nans with zeros. It may be worth thinking about implementing some interpolation
+or smoothing function here…</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of statistics to clean.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.combine_and_compute_statistics">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">combine_and_compute_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframes_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence_interval</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#utilities.combine_and_compute_statistics" title="Permalink to this definition"></a></dt>
+<dd><p>Combines dataframes from independent simulation trials and computes statistics.</p>
+<p>The results from each simulation are stored in a dataframe. This function 
+merges the dataframe from each simulation run and then computes mean
+and confidence interval statistics.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>dataframes_list</strong><span class="classifier">list</span></dt><dd><blockquote>
+<div><p>List of dataframes from each simulation run.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>confidence_interval<span class="classifier">float</span></dt><dd><p>Percent to use for confidence interval computation.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>final_dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Merged dataframe with statistics computed and stored.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.compute_averages">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">compute_averages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#utilities.compute_averages" title="Permalink to this definition"></a></dt>
+<dd><p>Compute averages for the statistics.</p>
+<p>This function uses the total counts to compute the average statistics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of statistics to compute averages for.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of statistics with averages computed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.compute_hospital_admissions_averages">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">compute_hospital_admissions_averages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#utilities.compute_hospital_admissions_averages" title="Permalink to this definition"></a></dt>
+<dd><p>Compute averages for the hospital admission statistics..</p>
+<p>This function uses the total counts to compute the average statistics for
+the hospital admissions. It is a seperate function as the hospital admission 
+statistics dataframe has a different layout to the others.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of statistics to compute averages for.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of statistics with averages computed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.compute_proportion">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">compute_proportion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_outpatient_queue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">None.dict.values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">None.dict.values</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#utilities.compute_proportion" title="Permalink to this definition"></a></dt>
+<dd><p>Computes proportion of patients being admitted to hospital from the outpatient queue.</p>
+<p>This function computes the proportion of patients being admitted to hospital from 
+the outpatient queue. Patients can go straight to hospital or be admitted whilst they 
+are waiting in the outpatient queue.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>from_outpatient_queue</strong><span class="classifier">dict.values</span></dt><dd><blockquote>
+<div><p>Daily count of patients admitted to hospital from the outpatient queue.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>total<span class="classifier">dict.values</span></dt><dd><p>Daily count of all patients admitted to hospital.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>proportion</strong><span class="classifier">list</span></dt><dd><p>Daily proportion of patients admitted from outpatient queue.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.compute_queue_statistics">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">compute_queue_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#utilities.compute_queue_statistics" title="Permalink to this definition"></a></dt>
+<dd><p>Computes echo queue statistics.</p>
+<p>This function computes the following statistics for an echo queue:</p>
+<p>– queue length.
+– average time in queue.
+– average age of patients in queue.
+– average NT pro BNP of patients in queue.</p>
+<p>It can be applied to both the outpatient and inpatient queues.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>current_time</strong><span class="classifier">float</span></dt><dd><blockquote>
+<div><p>Current simulation time.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>queue<span class="classifier">simpy.Resource.GetQueue</span></dt><dd><p>Echo queue.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>queue_statistics</strong><span class="classifier">dict</span></dt><dd><p>Computed statistics for the queue.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.compute_queue_time">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">compute_queue_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">simpy.resources.resource.PriorityRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.compute_queue_time" title="Permalink to this definition"></a></dt>
+<dd><p>Compute time elapsed since joining queue.</p>
+<p>This function computes the time elapsed  since the patient joined the queue.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>current_time</strong><span class="classifier">float</span></dt><dd><blockquote>
+<div><p>Current simulation time.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>request<span class="classifier">simpy.resources.resource.PriorityRequest</span></dt><dd><p>Simpy priority request that represents the patients action of joining the queue 
+and requesting access to the echo resource.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>time_in_queue</strong><span class="classifier">float</span></dt><dd><p>Time elapsed patient has been in the queue.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.create_simulator">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">create_simulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#utilities.create_simulator" title="Permalink to this definition"></a></dt>
+<dd><p>Create simulator object..</p>
+<p>This function creates an instance of the simulator object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>parameters</strong><span class="classifier">dict</span></dt><dd><p>Dictionary of simulation parameters..</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>simulator</strong><span class="classifier">object</span></dt><dd><p>Instance of the simulator class.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.determine_current_rule_set">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">determine_current_rule_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">datetime.datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intervention_rule_sets</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_rule_set</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#utilities.determine_current_rule_set" title="Permalink to this definition"></a></dt>
+<dd><p>Determines the current rule set.</p>
+<p>This function determines the current rule set. The rule set is a set of simulation parameters
+such as the inpatient and outpatient echo supply limits. These rule sets can be defined to 
+simulate lockdown conditions and system interventions.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>current_datetime</strong><span class="classifier">datetime.datetime</span></dt><dd><blockquote>
+<div><p>Current datetime.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>intervention_rule_sets<span class="classifier">list</span></dt><dd><p>List of dictionarities containing the rule sets that specify some of the simulation 
+parameters.</p>
+</dd>
+<dt>default_rule_set<span class="classifier">dict</span></dt><dd><p>Dictionary containing the default rule set.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>current_rule_set</strong><span class="classifier">dict</span></dt><dd><p>Dictionary containing the current rule set.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_age">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_age</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#utilities.generate_age" title="Permalink to this definition"></a></dt>
+<dd><p>Generates the age of the patient.</p>
+<p>This function randomly generates the age of a patient using
+predefined probabilities for predefined age groups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>age</strong><span class="classifier">int</span></dt><dd><p>Age of patient.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_arrival_time">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_arrival_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interarrival_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.generate_arrival_time" title="Permalink to this definition"></a></dt>
+<dd><p>Generates patient arrival time.</p>
+<p>This function generates the time that the patient arrives
+in the CHF system. The arrival process is modelled as a
+Poisson point process. The arrival times are sampled from an
+exponential distribution with rate parameter specified by the
+variable interarrival_time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>interarrival_time</strong><span class="classifier">float</span></dt><dd><p>Interarrival time.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>arrival_time</strong><span class="classifier">float</span></dt><dd><p>Time at which the patient arrives in the CHF system.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_echo_time_limit">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_echo_time_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient_pro_BNP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.generate_echo_time_limit" title="Permalink to this definition"></a></dt>
+<dd><p>Generate echo time limit.</p>
+<blockquote>
+<div><p>This function generates the time by which an outpatient should 
+receive their echo. This is used to set the priority of outpatients 
+joining the outpatient queue. The time limit is set as step
+function of the patients NT pro BNP result.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>echo_timie_limit</strong><span class="classifier">float</span></dt><dd><p>Expected time of patients death.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_expected_death_time">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_expected_death_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient_arrival_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_age</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_pro_BNP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.generate_expected_death_time" title="Permalink to this definition"></a></dt>
+<dd><p>Generates the expected time that a patient dies.</p>
+<p>This function generates the expected time that a patient dies.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>patient_arrival_time: float</strong></dt><dd><blockquote>
+<div><p>Time that the patient arrived in the CHF system.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>patient_age<span class="classifier">int </span></dt><dd><p>Age of patient.</p>
+</dd>
+<dt>patient_pro_BNP<span class="classifier">float</span></dt><dd><p>Patients NT pro BNP result.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>expected_death_time</strong><span class="classifier">float</span></dt><dd><p>Expected time of patients death.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_expected_gp_appointment_time">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_expected_gp_appointment_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient_arrival_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_age</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_pro_BNP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lockdown_status</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.generate_expected_gp_appointment_time" title="Permalink to this definition"></a></dt>
+<dd><p>Generates the expected time that a patient visits their GP.</p>
+<p>This function generates the expected time until a patient visits their GP. 
+Outside of lockdown periods, this time is sampled from an exponential 
+distribution. During lockdown periods, a lockdown delay is added.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>patient_arrival_time: float</strong></dt><dd><blockquote>
+<div><p>Time that the patient arrived in the CHF system.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>patient_age<span class="classifier">int </span></dt><dd><p>Age of patient.</p>
+</dd>
+<dt>patient_pro_BNP<span class="classifier">float</span></dt><dd><p>Patients NT pro BNP result.</p>
+</dd>
+<dt>lockdown_status<span class="classifier">bool</span></dt><dd><p>Flag indicating whether it is a currently a lockdown or not.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>expected_gp_appointment_time</strong><span class="classifier">float</span></dt><dd><p>Expected time of patients gp appointment.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_expected_hospital_admission_time">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_expected_hospital_admission_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient_arrival_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_age</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_pro_BNP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lockdown_status</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.generate_expected_hospital_admission_time" title="Permalink to this definition"></a></dt>
+<dd><p>Generates the expected time that a patient is admitted to hospital.</p>
+<p>This function generates the expected time that a patient is admitted to hospital.
+Outside of lockdown periods, this time is sampled from an exponential 
+distribution. During lockdown periods, a lockdown delay is added.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>patient_arrival_time: float</strong></dt><dd><blockquote>
+<div><p>Time that the patient arrived in the CHF system.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>patient_age<span class="classifier">int </span></dt><dd><p>Age of patient.</p>
+</dd>
+<dt>patient_pro_BNP<span class="classifier">float</span></dt><dd><p>Patients NT pro BNP result.</p>
+</dd>
+<dt>lockdown_status<span class="classifier">bool</span></dt><dd><p>Flag indicating whether it is a currently a lockdown or not.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>expected_hospital_admission_appointment_time</strong><span class="classifier">float</span></dt><dd><p>Expected time of patients hospital admission.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_gp_lockdown_delay">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_gp_lockdown_delay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.generate_gp_lockdown_delay" title="Permalink to this definition"></a></dt>
+<dd><p>Generates gp lockdown delay.</p>
+<p>This function generates the length of time that patients delay seeing
+their GP during the pandemic..</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>gp_lockdown_delay</strong><span class="classifier">float</span></dt><dd><p>Time delay for seeing GP.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_hospital_admission_lockdown_delay">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_hospital_admission_lockdown_delay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.generate_hospital_admission_lockdown_delay" title="Permalink to this definition"></a></dt>
+<dd><p>Generates hospital admission lockdown delay.</p>
+<p>This function generates the length of time that patients delay seeing
+visiting hospital during the pandemic..</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>hospital_admission_delay</strong><span class="classifier">float</span></dt><dd><p>Time delay for visiting hospital.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_lockdown_delay">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_lockdown_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lockdown_delay_parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.generate_lockdown_delay" title="Permalink to this definition"></a></dt>
+<dd><p>Generates lockdown delay.</p>
+<p>This function generates the gp or hospital admission lockdown delay 
+depending on the argument. The lockdown delays are sampled from 
+gamma distributions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>lockdown_delay</strong><span class="classifier">float</span></dt><dd><p>Time delay.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generate_pro_BNP">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generate_pro_BNP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient_age</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.generate_pro_BNP" title="Permalink to this definition"></a></dt>
+<dd><p>Generates  NT pro BNP result.</p>
+<p>This function generates the NT pro BNP result for 
+a patient given their age.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient_age</strong><span class="classifier">int</span></dt><dd><p>Age of the patient.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>pro_BNP</strong><span class="classifier">float</span></dt><dd><p>Patients NT pro BNP result.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.generic_plot">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">generic_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">matplotlib.pyplot.axes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_statistic</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence_interval</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">matplotlib.pyplot.axes</span></span></span><a class="headerlink" href="#utilities.generic_plot" title="Permalink to this definition"></a></dt>
+<dd><p>Plot patient statistics.</p>
+<p>This function is a generic plotting function that is used to 
+plot the median, upper and lower bounds for the patient statistics.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><blockquote>
+<div><p>Dataframe of statistics to plot..</p>
+</div></blockquote>
+<dl class="simple">
+<dt>axes: plt.axes</dt><dd><p>Axes object to plot the data on.</p>
+</dd>
+<dt>patient_outcome: str</dt><dd><p>Patient outcome to plot.</p>
+</dd>
+<dt>confidence_interval: float</dt><dd><p>Confidence interval used to compute the bounds.</p>
+</dd>
+<dt>title: str</dt><dd><p>Title for the plot.</p>
+</dd>
+<dt>x_label: str</dt><dd><p>Label for the x-axis.</p>
+</dd>
+<dt>y_label: str</dt><dd><p>Label for the y-axis.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>axes: plt.axes,</dt><dd><p>Axes with data plotted.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.get_age">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">get_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">simpy.resources.resource.PriorityRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.get_age" title="Permalink to this definition"></a></dt>
+<dd><p>Get patients age.</p>
+<p>This function extracts the patients age from the request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>request</strong><span class="classifier">simpy.resources.resource.PriorityRequest</span></dt><dd><p>Simpy priority request that represents the patients action of joining the queue 
+and requesting access to the echo resource.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>patient_age</strong><span class="classifier">int</span></dt><dd><p>Patients age.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.get_pro_BNP">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">get_pro_BNP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">simpy.resources.resource.PriorityRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#utilities.get_pro_BNP" title="Permalink to this definition"></a></dt>
+<dd><p>Get patients NT pro BNP.</p>
+<p>This function extracts the patients NT pro BNP result from the request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>request</strong><span class="classifier">simpy.resources.resource.PriorityRequest</span></dt><dd><p>Simpy priority request that represents the patients action of joining the queue 
+and requesting access to the echo resource.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>patient_pro_BNP</strong><span class="classifier">float</span></dt><dd><p>Patients NT pro BNP result.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.initialise_dataframe">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">initialise_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#utilities.initialise_dataframe" title="Permalink to this definition"></a></dt>
+<dd><p>Initialise dataframe with specified index and columns</p>
+<p>This function intialises a dataframe with a specified index and list of column
+headers.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>index</strong><span class="classifier">pd.DataFrame</span></dt><dd><blockquote>
+<div><p>Merged dataframe containing the results from all the simulations.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>columns<span class="classifier">list</span></dt><dd><p>List of column headers.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dataframe</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Initialised dataframe.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.run_simulation">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">run_simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#utilities.run_simulation" title="Permalink to this definition"></a></dt>
+<dd><p>Run simulation.</p>
+<p>This function runs the simulator class with the given parameters.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>index</strong><span class="classifier">int</span></dt><dd><blockquote>
+<div><p>Index of the simulation run used for parallel processing.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>parameters<span class="classifier">dict</span></dt><dd><p>Dictionary of simulation parameters..</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>simulation_result</strong><span class="classifier">dict</span></dt><dd><p>Dictionary containing the results of the simulation</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.save_figure">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">save_figure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">matplotlib.figure.Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#utilities.save_figure" title="Permalink to this definition"></a></dt>
+<dd><p>Plot patient outcomes.</p>
+<p>This function is a generic plotting function that is used to 
+plot the median, upper and lower bounds for the patient outcomes.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>fig</strong><span class="classifier">fig</span></dt><dd><blockquote>
+<div><p>Figure of plot to save.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>lines<span class="classifier">plt.lines</span></dt><dd><p>Intervention lines of the plot.</p>
+</dd>
+<dt>labels<span class="classifier">plt.labels</span></dt><dd><p>Labels of the plot.</p>
+</dd>
+<dt>figure_name<span class="classifier">str</span></dt><dd><p>Name to save the figure with.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.schedule_death">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">schedule_death</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">simpy.core.Environment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">simpy.events.Event</span></span></span><a class="headerlink" href="#utilities.schedule_death" title="Permalink to this definition"></a></dt>
+<dd><p>Schedules a death event.</p>
+<p>This function schedules a SimPy timeout event for a death.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>env</strong><span class="classifier">simpy.Environment</span></dt><dd><blockquote>
+<div><p>Simpy environment.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>patient<span class="classifier">object</span></dt><dd><p>Patient.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>death_event</strong><span class="classifier">simpy.event.timeout</span></dt><dd><p>Death event.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.schedule_gp_appointment">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">schedule_gp_appointment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">simpy.core.Environment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">simpy.events.Event</span></span></span><a class="headerlink" href="#utilities.schedule_gp_appointment" title="Permalink to this definition"></a></dt>
+<dd><p>Schedules a gp appointment event.</p>
+<p>This function schedules a SimPy timeout event for a gp appointment.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>env</strong><span class="classifier">simpy.Environment</span></dt><dd><blockquote>
+<div><p>Simpy environment.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>patient<span class="classifier">object</span></dt><dd><p>Patient.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>gp_app_event</strong><span class="classifier">simpy.event.timeout</span></dt><dd><p>GP appointment event.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.schedule_hospital_admission">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">schedule_hospital_admission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">simpy.core.Environment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">simpy.events.Event</span></span></span><a class="headerlink" href="#utilities.schedule_hospital_admission" title="Permalink to this definition"></a></dt>
+<dd><p>Schedules a hospital admission event.</p>
+<p>This function schedules a SimPy timeout event for a hospital admission.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>env</strong><span class="classifier">simpy.Environment</span></dt><dd><blockquote>
+<div><p>Simpy environment.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>patient<span class="classifier">object</span></dt><dd><p>Patient.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>hospital_admission_event</strong><span class="classifier">simpy.event.timeout</span></dt><dd><p>Hospital admission event.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.timer">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">timer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span></span></span><a class="headerlink" href="#utilities.timer" title="Permalink to this definition"></a></dt>
+<dd><p>Print runtime of function.</p>
+<p>Decorator for printing the runtime of a function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>func</strong><span class="classifier">function</span></dt><dd><p>Function to compute the runtime of.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.update_community_deaths_stats">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">update_community_deaths_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">community_deaths_total</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">community_deaths_avg_pro_BNP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">community_deaths_avg_age</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#utilities.update_community_deaths_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Update community death statistics.</p>
+<p>This function uses the patient data to update the community death statistics when 
+a patient dies. If they die before they have a GP appointment then they contribute 
+to the community death statistics.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>community_deaths_total</strong><span class="classifier">dict</span></dt><dd><blockquote>
+<div><p>Dictionary for storing total count of community deaths.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>community_deaths_avg_pro_BNP<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average pro BNP of patients dying in the community.</p>
+</dd>
+<dt>community_deaths_avg_age<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average age of patients dying in the community.</p>
+</dd>
+<dt>patient<span class="classifier">object</span></dt><dd><p>Patient that died.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.update_hospital_admissions_stats">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">update_hospital_admissions_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hospital_admissions_total_all</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hospital_admissions_avg_pro_BNP_all</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hospital_admissions_avg_age_all</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hospital_admissions_total_from_outpatient_queue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hospital_admissions_avg_pro_BNP_from_outpatient_queue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hospital_admissions_avg_age_from_outpatient_queue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#utilities.update_hospital_admissions_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Update hospital admission statistics.</p>
+<p>This function uses the patient data to update the hospital admission 
+statistics when a patient is admitted to hospital.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>hospital_admissions_total_all</strong><span class="classifier">dict</span></dt><dd><blockquote>
+<div><p>Dictionary for storing total count of hospital admissions.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>hospital_admissions_avg_pro_BNP_all<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average pro BNP of patients admitted to hospital.</p>
+</dd>
+<dt>hospital_admissions_avg_age_all<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average age of patients admitted to hospital.</p>
+</dd>
+<dt>hospital_admissions_total_from_outpatient_queue<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the total count of hospital admissions from 
+the outpatient queue.</p>
+</dd>
+<dt>hospital_admissions_avg_pro_BNP_from_outpatient_queue<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average pro BNP of patients admitted to hospital
+from the outpatient queue.</p>
+</dd>
+<dt>hospital_admissions_avg_age_from_outpatient_queue<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average age of patients admitted to hospital 
+from the outpatient queue.</p>
+</dd>
+<dt>patient<span class="classifier">object</span></dt><dd><p>Patient that was admitted to hospital.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.update_inpatient_queue_deaths_stats">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">update_inpatient_queue_deaths_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inpatient_queue_deaths_total</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inpatient_queue_deaths_avg_pro_BNP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inpatient_queue_deaths_avg_age</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#utilities.update_inpatient_queue_deaths_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Update inpatient queue death statistics.</p>
+<p>This function uses the patient data to update the inpatient queue death statistics when 
+a patient dies. If they die before whilst they are waiting in the inpatient echo queue
+then they contribute to the inpatient queue death statistics.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>inpatient_queue_deaths_total</strong><span class="classifier">dict</span></dt><dd><blockquote>
+<div><p>Dictionary for storing total count of inpatient queue deaths.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>inpatient_queue_deaths_avg_pro_BNP<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average pro BNP of patients dying in the inpatient
+queue.</p>
+</dd>
+<dt>inpatient_queue_deaths_avg_age<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average age of patients dying in the inpatient queue.</p>
+</dd>
+<dt>patient<span class="classifier">object</span></dt><dd><p>Patient that died.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.update_inpatient_wait_times_stats">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">update_inpatient_wait_times_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inpatient_wait_times_total</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inpatient_wait_times_avg_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#utilities.update_inpatient_wait_times_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Update inpatient echo wait time statistics.</p>
+<p>This function uses the patient data to update the inpatient echo wait time statistics.
+These statistics track how long patients waited to receive their inpatient echo for 
+patients who have received an inpatient echo.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>inpatient_wait_times_total</strong><span class="classifier">dict</span></dt><dd><blockquote>
+<div><p>Dictionary for storing the count of patients that received an inpatient echo.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>inpatient_wait_times_avg_time<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average time that patients waited in the inpatient queu
+before they received their echo.</p>
+</dd>
+<dt>patient<span class="classifier">object</span></dt><dd><p>Patient that died.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.update_outpatient_queue_deaths_stats">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">update_outpatient_queue_deaths_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outpatient_queue_deaths_total</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outpatient_queue_deaths_avg_pro_BNP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outpatient_queue_deaths_avg_age</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#utilities.update_outpatient_queue_deaths_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Update outpatient queue death statistics.</p>
+<p>This function uses the patient data to update the outpatient queue death statistics when 
+a patient dies. If they die before whilst they are waiting in the outpatient echo queue
+then they contribute to the outpatient queue death statistics.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>outpatient_queue_deaths_total</strong><span class="classifier">dict</span></dt><dd><blockquote>
+<div><p>Dictionary for storing total count of outpatient queue deaths.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>outpatient_queue_deaths_avg_pro_BNP<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average pro BNP of patients dying in the outpatient
+queue.</p>
+</dd>
+<dt>outpatient_queue_deaths_avg_age<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average age of patients dying in the outpatient queue.</p>
+</dd>
+<dt>patient<span class="classifier">object</span></dt><dd><p>Patient that died.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilities.update_outpatient_wait_times_stats">
+<span class="sig-prename descclassname"><span class="pre">utilities.</span></span><span class="sig-name descname"><span class="pre">update_outpatient_wait_times_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outpatient_wait_times_total</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outpatient_wait_times_avg_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#utilities.update_outpatient_wait_times_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Update outpatient echo wait time statistics.</p>
+<p>This function uses the patient data to update the outpatient echo wait time statistics.
+These statistics track how long patients waited to receive their outpatient echo for 
+patients who have received an outpatient echo.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>outpatient_wait_times_total</strong><span class="classifier">dict</span></dt><dd><blockquote>
+<div><p>Dictionary for storing the count of patients that received an outpatient echo.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>outpatient_wait_times_avg_time<span class="classifier">dict</span></dt><dd><p>Dictionary for storing the average time that patients waited in the outpatient queu
+before they received their echo.</p>
+</dd>
+<dt>patient<span class="classifier">object</span></dt><dd><p>Patient that died.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, na.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>system module &mdash; chf_des na documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> chf_des
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">system module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">chf_des</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>system module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/system.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-system">
+<span id="system-module"></span><h1>system module<a class="headerlink" href="#module-system" title="Permalink to this headline"></a></h1>
+<p>Docstring for the system.py module.</p>
+<p>This module contains the echo system class. This class manages the 
+outpatient and inpatient echocardiogram resources. It is responsible 
+for:</p>
+<blockquote>
+<div><p>– Updating the daily echocardiogram supply limits. 
+– Refreshing the daily echocardiogram supply at the end of each day. 
+– Updating the global lockdown status.</p>
+</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="system.EchoSystem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">system.</span></span><span class="sig-name descname"><span class="pre">EchoSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">simpy.core.Environment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simulation_parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#system.EchoSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#system.EchoSystem.initialise_statistics_dictionaries" title="system.EchoSystem.initialise_statistics_dictionaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialise_statistics_dictionaries</span></code></a>()</p></td>
+<td><p>Method to initialise dictionaries for storing statistics.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#system.EchoSystem.new_day" title="system.EchoSystem.new_day"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_day</span></code></a>()</p></td>
+<td><p>Method that implements the process of starting a new day.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#system.EchoSystem.refresh_inpatient_supply" title="system.EchoSystem.refresh_inpatient_supply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">refresh_inpatient_supply</span></code></a>()</p></td>
+<td><p>Method to refresh the inpatient echo supply.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#system.EchoSystem.refresh_outpatient_supply" title="system.EchoSystem.refresh_outpatient_supply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">refresh_outpatient_supply</span></code></a>()</p></td>
+<td><p>Method to refresh the outpatient echo supply.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#system.EchoSystem.update_echo_daily_supply_limits" title="system.EchoSystem.update_echo_daily_supply_limits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_echo_daily_supply_limits</span></code></a>()</p></td>
+<td><p>Method to update the echo daily supply limits.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#system.EchoSystem.update_echo_supply_limit_dictionaries" title="system.EchoSystem.update_echo_supply_limit_dictionaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_echo_supply_limit_dictionaries</span></code></a>()</p></td>
+<td><p>Method to update echo supply limit dictionaries.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#system.EchoSystem.update_inpatient_queue_stats" title="system.EchoSystem.update_inpatient_queue_stats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_inpatient_queue_stats</span></code></a>()</p></td>
+<td><p>Method to udpate the outpatient queue statistics.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#system.EchoSystem.update_lockdown_status" title="system.EchoSystem.update_lockdown_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_lockdown_status</span></code></a>()</p></td>
+<td><p>Method that updates the lockdown status.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#system.EchoSystem.update_outpatient_queue_stats" title="system.EchoSystem.update_outpatient_queue_stats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_outpatient_queue_stats</span></code></a>()</p></td>
+<td><p>Method to udpate the outpatient queue statistics.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="system.EchoSystem.initialise_statistics_dictionaries">
+<span class="sig-name descname"><span class="pre">initialise_statistics_dictionaries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#system.EchoSystem.initialise_statistics_dictionaries" title="Permalink to this definition"></a></dt>
+<dd><p>Method to initialise dictionaries for storing statistics.</p>
+<p>This method initialises dictionaries for storing outpatient 
+and inpatient queue statistics. Dictionaries are used to store 
+statistics during the simulation as it they take less time to update
+then pandas dataframes. Once the simulation has finished, the dictionaries 
+are converted into a dataframe to make the analysis easier.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="system.EchoSystem.new_day">
+<span class="sig-name descname"><span class="pre">new_day</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#system.EchoSystem.new_day" title="Permalink to this definition"></a></dt>
+<dd><p>Method that implements the process of starting a new day.</p>
+<p>This method starts a new day in the simulation. This involves
+checking updating the current rule set, checking if a lockdown is 
+currently in effect and updating the echo supply resources.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="system.EchoSystem.refresh_inpatient_supply">
+<span class="sig-name descname"><span class="pre">refresh_inpatient_supply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#system.EchoSystem.refresh_inpatient_supply" title="Permalink to this definition"></a></dt>
+<dd><p>Method to refresh the inpatient echo supply.</p>
+<p>This method refreshes the inpatient supply at the beginning of every day.</p>
+<p class="rubric">Notes</p>
+<p>Simpy has an annoying feature that you can’t request 0 resource units from a container.
+This is why we have to empty the supply only if it is greater than 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="system.EchoSystem.refresh_outpatient_supply">
+<span class="sig-name descname"><span class="pre">refresh_outpatient_supply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#system.EchoSystem.refresh_outpatient_supply" title="Permalink to this definition"></a></dt>
+<dd><p>Method to refresh the outpatient echo supply.</p>
+<p>This method refreshes the outpatient supply at the beginning of every day.</p>
+<p class="rubric">Notes</p>
+<p>Simpy has an annoying feature that you can’t request 0 resource units from a container.
+This is why we have to empty the supply only if it is greater than 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="system.EchoSystem.update_echo_daily_supply_limits">
+<span class="sig-name descname"><span class="pre">update_echo_daily_supply_limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#system.EchoSystem.update_echo_daily_supply_limits" title="Permalink to this definition"></a></dt>
+<dd><p>Method to update the echo daily supply limits.</p>
+<p>This method updates the echo daily supply limits depending
+on the daily supply rule set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="system.EchoSystem.update_echo_supply_limit_dictionaries">
+<span class="sig-name descname"><span class="pre">update_echo_supply_limit_dictionaries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#system.EchoSystem.update_echo_supply_limit_dictionaries" title="Permalink to this definition"></a></dt>
+<dd><p>Method to update echo supply limit dictionaries.</p>
+<p>This method updates the outpatient and inpatient daily supply
+limits based on the current rule set. This enables the user to specify
+how many outpatient and inpatient echocardiograms can be performed 
+each day fo the week. This may change during lockdown or during user
+specified interventions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="system.EchoSystem.update_inpatient_queue_stats">
+<span class="sig-name descname"><span class="pre">update_inpatient_queue_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#system.EchoSystem.update_inpatient_queue_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Method to udpate the outpatient queue statistics.</p>
+<p>This method computes the outpatient queue statistics at the end of each day. It
+then adds these statistics to the appropriate dictionaries.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="system.EchoSystem.update_lockdown_status">
+<span class="sig-name descname"><span class="pre">update_lockdown_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#system.EchoSystem.update_lockdown_status" title="Permalink to this definition"></a></dt>
+<dd><p>Method that updates the lockdown status.</p>
+<p>This method updates the lockdown status depending on the current rule set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="system.EchoSystem.update_outpatient_queue_stats">
+<span class="sig-name descname"><span class="pre">update_outpatient_queue_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#system.EchoSystem.update_outpatient_queue_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Method to udpate the outpatient queue statistics.</p>
+<p>This method computes the outpatient queue statistics at the end of each day. It
+then adds these statistics to the appropriate dictionaries.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, na.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

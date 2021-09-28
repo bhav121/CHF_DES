@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>simulator module &mdash; chf_des na documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> chf_des
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">simulator module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">chf_des</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>simulator module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/simulator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-simulator">
+<span id="simulator-module"></span><h1>simulator module<a class="headerlink" href="#module-simulator" title="Permalink to this headline"></a></h1>
+<p>Docstring for the simulator.py module.</p>
+<p>This module runs the simulation.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="simulator.Simulator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">Simulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation_parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#simulator.Simulator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#simulator.Simulator.compute_average_statistics" title="simulator.Simulator.compute_average_statistics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_average_statistics</span></code></a>()</p></td>
+<td><p>Compute averages.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#simulator.Simulator.determine_initial_event" title="simulator.Simulator.determine_initial_event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">determine_initial_event</span></code></a>(patient)</p></td>
+<td><p>Determines initial event.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#simulator.Simulator.initialise_statistics_dataframes" title="simulator.Simulator.initialise_statistics_dataframes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialise_statistics_dataframes</span></code></a>()</p></td>
+<td><p>Initiailises data frames to store the statistics.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#simulator.Simulator.initialise_statistics_dictionaries" title="simulator.Simulator.initialise_statistics_dictionaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialise_statistics_dictionaries</span></code></a>()</p></td>
+<td><p>Initiailises dictionaries to store the statistics.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#simulator.Simulator.interrupt_inpatient_process" title="simulator.Simulator.interrupt_inpatient_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interrupt_inpatient_process</span></code></a>(patient, ...)</p></td>
+<td><p>Interrupt inpatient queue process.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#simulator.Simulator.interrupt_outpatient_process" title="simulator.Simulator.interrupt_outpatient_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interrupt_outpatient_process</span></code></a>(patient, ...)</p></td>
+<td><p>Interrupt outpatient queue process.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#simulator.Simulator.load_dataframes_with_dictionary_data" title="simulator.Simulator.load_dataframes_with_dictionary_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_dataframes_with_dictionary_data</span></code></a>()</p></td>
+<td><p>Load dataframes with dictionary data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#simulator.Simulator.move_patient_through_death_process" title="simulator.Simulator.move_patient_through_death_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move_patient_through_death_process</span></code></a>(patient)</p></td>
+<td><p>Move patient through death process.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#simulator.Simulator.move_patient_through_gp_appointment_process" title="simulator.Simulator.move_patient_through_gp_appointment_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move_patient_through_gp_appointment_process</span></code></a>(patient)</p></td>
+<td><p>Move patient through GP appointment process.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#simulator.Simulator.move_patient_through_hospital_admission_process" title="simulator.Simulator.move_patient_through_hospital_admission_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move_patient_through_hospital_admission_process</span></code></a>(patient)</p></td>
+<td><p>Move patient through hospital admission process.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#simulator.Simulator.move_patient_through_inpatient_queue_process" title="simulator.Simulator.move_patient_through_inpatient_queue_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move_patient_through_inpatient_queue_process</span></code></a>(patient)</p></td>
+<td><p>Move patient through inpatient queue process.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#simulator.Simulator.move_patient_through_outpatient_queue_process" title="simulator.Simulator.move_patient_through_outpatient_queue_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move_patient_through_outpatient_queue_process</span></code></a>(patient)</p></td>
+<td><p>Move patient through outpatient queue process.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#simulator.Simulator.move_through_patient_pathway" title="simulator.Simulator.move_through_patient_pathway"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move_through_patient_pathway</span></code></a>(patient)</p></td>
+<td><p>Simulates the patient pathway through the system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#simulator.Simulator.run_simulation" title="simulator.Simulator.run_simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_simulation</span></code></a>()</p></td>
+<td><p>Run the simulation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#simulator.Simulator.run_system" title="simulator.Simulator.run_system"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_system</span></code></a>()</p></td>
+<td><p>Run system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#simulator.Simulator.update_patient_data_after_inpatient_echo" title="simulator.Simulator.update_patient_data_after_inpatient_echo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_patient_data_after_inpatient_echo</span></code></a>(patient)</p></td>
+<td><p>Update patient data after an inpatient echocardiogram.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#simulator.Simulator.update_patient_data_after_outpatient_echo" title="simulator.Simulator.update_patient_data_after_outpatient_echo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_patient_data_after_outpatient_echo</span></code></a>(patient)</p></td>
+<td><p>Update patient data after an outpatient echocardiogram.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.compute_average_statistics">
+<span class="sig-name descname"><span class="pre">compute_average_statistics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.compute_average_statistics" title="Permalink to this definition"></a></dt>
+<dd><p>Compute averages.</p>
+<p>This method computes the average age and average NT pro BNP of patients that;</p>
+<blockquote>
+<div><p>– Were admitted to hospital.
+– Died in the community.
+– Died in the outpatient queue.
+– Died in the inpatient queue.
+– Waited in the outpatient queue.
+– Waited in the inpatient queue.</p>
+</div></blockquote>
+<p class="rubric">Notes</p>
+<p>These computations are done after the simulation has finished for efficiency reasons.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.determine_initial_event">
+<span class="sig-name descname"><span class="pre">determine_initial_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.determine_initial_event" title="Permalink to this definition"></a></dt>
+<dd><p>Determines initial event.</p>
+<p>This method determines the initial event that occurs for a given patient. 
+The expected time until each event occurs are recorded in the patient object.
+These expected times are used to determine which event occurs first.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><p>Patient object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.initialise_statistics_dataframes">
+<span class="sig-name descname"><span class="pre">initialise_statistics_dataframes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.initialise_statistics_dataframes" title="Permalink to this definition"></a></dt>
+<dd><p>Initiailises data frames to store the statistics.</p>
+<p>This method initialises data frames for storing the statistics 
+of interest. These data frames are updated at the end of the simulation 
+using the data stored in the dictionaries during the simulation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.initialise_statistics_dictionaries">
+<span class="sig-name descname"><span class="pre">initialise_statistics_dictionaries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.initialise_statistics_dictionaries" title="Permalink to this definition"></a></dt>
+<dd><p>Initiailises dictionaries to store the statistics.</p>
+<p>This method initialises dictionaries for storing the statistics 
+of interest. These dictionaries are updated during the simulation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.interrupt_inpatient_process">
+<span class="sig-name descname"><span class="pre">interrupt_inpatient_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inpatient_process</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">simpy.events.Process</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.interrupt_inpatient_process" title="Permalink to this definition"></a></dt>
+<dd><p>Interrupt inpatient queue process.</p>
+<p>This method generates an interrupt exception if the patient dies
+any time in between joining the inpatient queue and receiving
+their echocardiogram.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><blockquote>
+<div><p>Patient object.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>inpatient_process<span class="classifier">simpy.Process</span></dt><dd><p>Inpatient echocardiogram process.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.interrupt_outpatient_process">
+<span class="sig-name descname"><span class="pre">interrupt_outpatient_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outpatient_process</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">simpy.events.Process</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.interrupt_outpatient_process" title="Permalink to this definition"></a></dt>
+<dd><p>Interrupt outpatient queue process.</p>
+<p>This method generates an interrupt exception if the patient is admitted to hospital or dies
+any time in between joining the outpatient queue and receiving their echocardiogram.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><blockquote>
+<div><p>Patient object.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>outpatient_process<span class="classifier">simpy.Process</span></dt><dd><p>Outpatient echocardiogram process.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.load_dataframes_with_dictionary_data">
+<span class="sig-name descname"><span class="pre">load_dataframes_with_dictionary_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.load_dataframes_with_dictionary_data" title="Permalink to this definition"></a></dt>
+<dd><p>Load dataframes with dictionary data.</p>
+<p>This method moves the statistics stored in the dictionaries into the data frames for
+later processing and plotting.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.move_patient_through_death_process">
+<span class="sig-name descname"><span class="pre">move_patient_through_death_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.move_patient_through_death_process" title="Permalink to this definition"></a></dt>
+<dd><p>Move patient through death process.</p>
+<p>This method moves the patient through the death process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><p>Patient object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.move_patient_through_gp_appointment_process">
+<span class="sig-name descname"><span class="pre">move_patient_through_gp_appointment_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.move_patient_through_gp_appointment_process" title="Permalink to this definition"></a></dt>
+<dd><p>Move patient through GP appointment process.</p>
+<p>This method moves the patient through the GP appointment process. The patients 
+NT pro BNP result is stored in the patient object. If the result is less than 
+400, the patient exits the system. If the result is greater than 400, the patient
+is moved through the outpatient queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><p>Patient object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.move_patient_through_hospital_admission_process">
+<span class="sig-name descname"><span class="pre">move_patient_through_hospital_admission_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.move_patient_through_hospital_admission_process" title="Permalink to this definition"></a></dt>
+<dd><p>Move patient through hospital admission process.</p>
+<p>This method moves the patient through the hospital admission process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><p>Patient object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.move_patient_through_inpatient_queue_process">
+<span class="sig-name descname"><span class="pre">move_patient_through_inpatient_queue_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.move_patient_through_inpatient_queue_process" title="Permalink to this definition"></a></dt>
+<dd><p>Move patient through inpatient queue process.</p>
+<p>This method moves the patient through the inpatient queue process. The patient
+is sent for an inpatient echocardiogram. The priority of the patient is determined 
+by the time they arrive in the queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><p>Patient object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The patient can die at any time during the inpatient queue process. This is 
+modelled using the SimPy Interrupt class. An interrupt exception is generated
+death occurs before the inpatient queue process has finished.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.move_patient_through_outpatient_queue_process">
+<span class="sig-name descname"><span class="pre">move_patient_through_outpatient_queue_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.move_patient_through_outpatient_queue_process" title="Permalink to this definition"></a></dt>
+<dd><p>Move patient through outpatient queue process.</p>
+<p>This method moves the patient through the outpatient queue process. The patient
+is sent for an outpatient echocardiogram. The priority of the patient is determined 
+by their NT pro BNP result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><p>Patient object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The patient can be admitted to hospital or die at any time during the outpatient queue
+process. This is modelled using the SimPy Interrupt class. An interrupt exception
+is generated if hospital admission or death occurs before the outpatient queue process
+has finished.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.move_through_patient_pathway">
+<span class="sig-name descname"><span class="pre">move_through_patient_pathway</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.move_through_patient_pathway" title="Permalink to this definition"></a></dt>
+<dd><p>Simulates the patient pathway through the system.</p>
+<p>This method simulates the process of a patient presenting to the
+system and proceeding through the various stages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><p>Patient object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.run_simulation">
+<span class="sig-name descname"><span class="pre">run_simulation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#simulator.Simulator.run_simulation" title="Permalink to this definition"></a></dt>
+<dd><p>Run the simulation.</p>
+<p>This method runs the simulation until the given simulation time. It 
+returns a list of dataframes with the stored statistics of interest.</p>
+<blockquote>
+<div><p>in the form of two data frames.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>simulation_result</strong><span class="classifier">list</span></dt><dd><p>List containing the data frames that contain the statistics recorded
+during the simulation.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.run_system">
+<span class="sig-name descname"><span class="pre">run_system</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.run_system" title="Permalink to this definition"></a></dt>
+<dd><p>Run system.</p>
+<p>This method generates new patients and moves them through the system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.update_patient_data_after_inpatient_echo">
+<span class="sig-name descname"><span class="pre">update_patient_data_after_inpatient_echo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.update_patient_data_after_inpatient_echo" title="Permalink to this definition"></a></dt>
+<dd><p>Update patient data after an inpatient echocardiogram.</p>
+<p>This method updates the patient data after they have received
+and outpatient echocardiogram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><p>Patient object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="simulator.Simulator.update_patient_data_after_outpatient_echo">
+<span class="sig-name descname"><span class="pre">update_patient_data_after_outpatient_echo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#simulator.Simulator.update_patient_data_after_outpatient_echo" title="Permalink to this definition"></a></dt>
+<dd><p>Update patient data after an outpatient echocardiogram.</p>
+<p>This method updates the patient data after they have received
+and outpatient echocardiogram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>patient</strong><span class="classifier">object</span></dt><dd><p>Patient object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, na.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>plotter module &mdash; chf_des na documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> chf_des
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">plotter module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">chf_des</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>plotter module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/plotter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-plotter">
+<span id="plotter-module"></span><h1>plotter module<a class="headerlink" href="#module-plotter" title="Permalink to this headline"></a></h1>
+<p>Docstring for the plotter.py module.</p>
+<p>This module plots the results of an experiment.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="plotter.Plotter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">plotter.</span></span><span class="sig-name descname"><span class="pre">Plotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotting_parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotter.Plotter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#plotter.Plotter.clean_data" title="plotter.Plotter.clean_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_data</span></code></a>()</p></td>
+<td><p>Cleans data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#plotter.Plotter.plot_deaths_combined" title="plotter.Plotter.plot_deaths_combined"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_deaths_combined</span></code></a>(save_flag, show_flag)</p></td>
+<td><p>Plot all patient deaths.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#plotter.Plotter.plot_deaths_separate" title="plotter.Plotter.plot_deaths_separate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_deaths_separate</span></code></a>(death_location, ...)</p></td>
+<td><p>Plot patient deaths at specific location in the system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#plotter.Plotter.plot_hospital_admissions_all" title="plotter.Plotter.plot_hospital_admissions_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_hospital_admissions_all</span></code></a>(...)</p></td>
+<td><p>Plots total hospital admissions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#plotter.Plotter.plot_hospital_admissions_from_outpatient_queue" title="plotter.Plotter.plot_hospital_admissions_from_outpatient_queue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_hospital_admissions_from_outpatient_queue</span></code></a>(...)</p></td>
+<td><p>Plots hospital admissions from outpatient queue.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#plotter.Plotter.plot_queue_lengths_combined" title="plotter.Plotter.plot_queue_lengths_combined"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_queue_lengths_combined</span></code></a>(save_flag, show_flag)</p></td>
+<td><p>Plots echo queue lengths.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#plotter.Plotter.plot_queue_lengths_seperate" title="plotter.Plotter.plot_queue_lengths_seperate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_queue_lengths_seperate</span></code></a>(queue_location, ...)</p></td>
+<td><p>Plots echo queue lengths.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#plotter.Plotter.plot_queue_wait_times" title="plotter.Plotter.plot_queue_wait_times"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_queue_wait_times</span></code></a>(save_flag, show_flag)</p></td>
+<td><p>Plots echo queue wait times.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#plotter.Plotter.plot_wait_times" title="plotter.Plotter.plot_wait_times"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_wait_times</span></code></a>(save_flag, show_flag)</p></td>
+<td><p>Plots echo queue wait times.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="plotter.Plotter.clean_data">
+<span class="sig-name descname"><span class="pre">clean_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.clean_data" title="Permalink to this definition"></a></dt>
+<dd><p>Cleans data.</p>
+<p>This method cleans data for plotting.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotter.Plotter.plot_deaths_combined">
+<span class="sig-name descname"><span class="pre">plot_deaths_combined</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plotter.Plotter.plot_deaths_combined" title="Permalink to this definition"></a></dt>
+<dd><p>Plot all patient deaths.</p>
+<p>This method plots all patient deaths.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>save_flag</strong><span class="classifier">bool</span></dt><dd><blockquote>
+<div><p>Flag indicating whether or not the plot should be saved.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>show_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be shown to the user.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotter.Plotter.plot_deaths_separate">
+<span class="sig-name descname"><span class="pre">plot_deaths_separate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">death_location</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_deaths_separate" title="Permalink to this definition"></a></dt>
+<dd><p>Plot patient deaths at specific location in the system.</p>
+<p>This method plots patient deaths in either the community, the outpatient or inpatient queue.
+It also plots the average age or average NT pro BNP of patients in the queue as 
+requested.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>death_location</strong><span class="classifier">str</span></dt><dd><blockquote>
+<div><p>Indicates whether to plot coommunity, outpatient or inpatient data.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>patient_attribute<span class="classifier">str</span></dt><dd><p>Indicates whether to plot average age or average NT pro BNP.</p>
+</dd>
+<dt>save_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be saved.</p>
+</dd>
+<dt>show_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be shown to the user.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotter.Plotter.plot_hospital_admissions_all">
+<span class="sig-name descname"><span class="pre">plot_hospital_admissions_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_hospital_admissions_all" title="Permalink to this definition"></a></dt>
+<dd><p>Plots total hospital admissions.</p>
+<p>This method plots the total hospital admissions.It also plots the average age
+or average NT pro BNP of patients admitted to hospital.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>patient_attribute</strong><span class="classifier">str</span></dt><dd><blockquote>
+<div><p>Indicates whether to plot average age or average NT pro BNP.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>save_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be saved.</p>
+</dd>
+<dt>show_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be shown to the user.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotter.Plotter.plot_hospital_admissions_from_outpatient_queue">
+<span class="sig-name descname"><span class="pre">plot_hospital_admissions_from_outpatient_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_hospital_admissions_from_outpatient_queue" title="Permalink to this definition"></a></dt>
+<dd><p>Plots hospital admissions from outpatient queue.</p>
+<p>This method plots the total hospital admissions from the outpatient queue and 
+the proportion of all hospital admissions that come from the outpatient queue.
+It also plots the average age or average NT pro BNP of patients admitted to hospital.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>patient_attribute</strong><span class="classifier">str</span></dt><dd><blockquote>
+<div><p>Indicates whether to plot average age or average NT pro BNP.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>save_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be saved.</p>
+</dd>
+<dt>show_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be shown to the user.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotter.Plotter.plot_queue_lengths_combined">
+<span class="sig-name descname"><span class="pre">plot_queue_lengths_combined</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_queue_lengths_combined" title="Permalink to this definition"></a></dt>
+<dd><p>Plots echo queue lengths.</p>
+<p>This method plots the outpatient and inpatient echocardiogram queue lengths 
+over time on the same plot.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>save_flag</strong><span class="classifier">bool</span></dt><dd><blockquote>
+<div><p>Flag indicating whether or not the plot should be saved.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>show_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be shown to the user.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotter.Plotter.plot_queue_lengths_seperate">
+<span class="sig-name descname"><span class="pre">plot_queue_lengths_seperate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue_location</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patient_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_queue_lengths_seperate" title="Permalink to this definition"></a></dt>
+<dd><p>Plots echo queue lengths.</p>
+<p>This method plots either the outpatient or inpatient echocardiogram queue lengths.
+It also plots the average age or average NT pro BNP of patients in the queue as 
+requested.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>queue_location</strong><span class="classifier">str</span></dt><dd><blockquote>
+<div><p>Indicates whether to plot outpatient or inpatient data.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>patient_attribute<span class="classifier">str</span></dt><dd><p>Indicates whether to plot average age or average NT pro BNP.</p>
+</dd>
+<dt>save_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be saved.</p>
+</dd>
+<dt>show_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be shown to the user.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotter.Plotter.plot_queue_wait_times">
+<span class="sig-name descname"><span class="pre">plot_queue_wait_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_queue_wait_times" title="Permalink to this definition"></a></dt>
+<dd><p>Plots echo queue wait times.</p>
+<p>This method plots the time that patients have been waiting in the outpatient 
+and inpatient queues.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>save_flag</strong><span class="classifier">bool</span></dt><dd><blockquote>
+<div><p>Flag indicating whether or not the plot should be saved.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>show_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be shown to the user.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="plotter.Plotter.plot_wait_times">
+<span class="sig-name descname"><span class="pre">plot_wait_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#plotter.Plotter.plot_wait_times" title="Permalink to this definition"></a></dt>
+<dd><p>Plots echo queue wait times.</p>
+<p>This method plots the time that patients waited for outpatient and inpatient 
+echocardiograms.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>save_flag</strong><span class="classifier">bool</span></dt><dd><blockquote>
+<div><p>Flag indicating whether or not the plot should be saved.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>show_flag<span class="classifier">bool</span></dt><dd><p>Flag indicating whether or not the plot should be shown to the user.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, na.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

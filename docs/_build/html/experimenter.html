@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>experimenter module &mdash; chf_des na documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> chf_des
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">experimenter module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">chf_des</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>experimenter module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/experimenter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-experimenter">
+<span id="experimenter-module"></span><h1>experimenter module<a class="headerlink" href="#module-experimenter" title="Permalink to this headline"></a></h1>
+<p>Docstring for the experimenter.py module.</p>
+<p>This module runs experiments. This involves:</p>
+<blockquote>
+<div><p>– Initiating simulation trials. 
+– Collecting simulation results. 
+– Passing experiment results to plotter object to plot.</p>
+</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="experimenter.Experimenter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">experimenter.</span></span><span class="sig-name descname"><span class="pre">Experimenter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation_parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#experimenter.Experimenter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#experimenter.Experimenter.analyse_experiment" title="experimenter.Experimenter.analyse_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyse_experiment</span></code></a>()</p></td>
+<td><p>Analyse experiment.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#experimenter.Experimenter.plot_experiment" title="experimenter.Experimenter.plot_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_experiment</span></code></a>(plotting_parameters)</p></td>
+<td><p>Plot results of experiment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#experimenter.Experimenter.run_experiment" title="experimenter.Experimenter.run_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_experiment</span></code></a>(number_simulation_trials, ...)</p></td>
+<td><p>Run experiment.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="experimenter.Experimenter.analyse_experiment">
+<span class="sig-name descname"><span class="pre">analyse_experiment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#experimenter.Experimenter.analyse_experiment" title="Permalink to this definition"></a></dt>
+<dd><p>Analyse experiment.</p>
+<p>This method combines the results of all the simulation trials and computes
+the median, lower bound and upper bounds for the statistics of interest.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="experimenter.Experimenter.plot_experiment">
+<span class="sig-name descname"><span class="pre">plot_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotting_parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#experimenter.Experimenter.plot_experiment" title="Permalink to this definition"></a></dt>
+<dd><p>Plot results of experiment.</p>
+<p>This method instantiates the Plotter object and proceeds to plot 
+the results of the experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>plotting_parameters</strong><span class="classifier">dict</span></dt><dd><p>Parameters used for plotting.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="experimenter.Experimenter.run_experiment">
+<span class="sig-name descname"><span class="pre">run_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_simulation_trials</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">development_flag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#experimenter.Experimenter.run_experiment" title="Permalink to this definition"></a></dt>
+<dd><p>Run experiment.</p>
+<p>This method runs the indepedent simulation trials and collects the results.
+There is a development flag that enables or disables asynchronous and parallelised
+computation of the simulation trials. Set development_flag to True if you want
+to change something in the simulation and receive helpful error messages…</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>number_simulation_trials</strong><span class="classifier">int</span></dt><dd><blockquote>
+<div><p>Number of simulation trials.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>development_flag<span class="classifier">bool</span></dt><dd><p>Flag to indicate whether or not to run computation asynchronously and in parallel.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="experimenter.get_result_async">
+<span class="sig-prename descclassname"><span class="pre">experimenter.</span></span><span class="sig-name descname"><span class="pre">get_result_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation_result</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#experimenter.get_result_async" title="Permalink to this definition"></a></dt>
+<dd><p>Append simulation trial results to experiment results.</p>
+<p>This function appends the results from the simulation to the experiment results 
+dictionary for later use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>simulation_result</strong><span class="classifier">dict</span></dt><dd><p>Dictionary containing the results of the simulation</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="experimenter.get_result_standard">
+<span class="sig-prename descclassname"><span class="pre">experimenter.</span></span><span class="sig-name descname"><span class="pre">get_result_standard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_results</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simulation_result</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#experimenter.get_result_standard" title="Permalink to this definition"></a></dt>
+<dd><p>Append simulation trial results to experiment results.</p>
+<p>This function appends the results from the simulation to the experiment results 
+dictionary for later use.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>simulation_result</strong><span class="classifier">dict</span></dt><dd><blockquote>
+<div><p>Dictionary containing the results of the simulation.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>experiment_results<span class="classifier">dict</span></dt><dd><p>Dictionary containing the results of the experiment.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>experiment_results</strong><span class="classifier">dict</span></dt><dd><p>Dictionary containing the results of the experiment.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, na.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

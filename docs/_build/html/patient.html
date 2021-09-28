@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>patient module &mdash; chf_des na documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> chf_des
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">patient module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">chf_des</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>patient module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/patient.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-patient">
+<span id="patient-module"></span><h1>patient module<a class="headerlink" href="#module-patient" title="Permalink to this headline"></a></h1>
+<p>Docstring for the patient.py module.</p>
+<p>This module contains the patient data class.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="patient.Patient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">patient.</span></span><span class="sig-name descname"><span class="pre">Patient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patient_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pro_BNP</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">echo_time_limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_gp_appointment_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_death_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_hospital_admission_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outpatient_queue_arrival_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outpatient_queue_exit_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inpatient_queue_arrival_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inpatient_queue_exit_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outpatient_echo</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inpatient_echo</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hospital_admission_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">death_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gp_appointment_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">echo_datetime</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">died_in_community</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">died_in_outpatient_queue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">died_in_inpatient_queue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">echo_wait_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#patient.Patient" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dataclass to store patient data.</p>
+<p>This class instantiates a patient in the CHF system 
+with a given set of attributes. The attributes are 
+determined using functions defined in the utilities 
+module.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>patient_id</strong><span class="classifier">int</span></dt><dd><blockquote>
+<div><p>Patient identification.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>arrival_time<span class="classifier">float </span></dt><dd><p>Time that the patient arrived in the CHF system (measured in simulation time).</p>
+</dd>
+<dt>arrival_datetime<span class="classifier">float </span></dt><dd><p>Date and time that the patient arrived in the CHF system (measured in calendar time).</p>
+</dd>
+<dt>age<span class="classifier">int</span></dt><dd><p>Patients’ age.</p>
+</dd>
+<dt>pro_BNP<span class="classifier">float  </span></dt><dd><p>Patients’ NT pro BNP result.</p>
+</dd>
+<dt>echo_time_limit<span class="classifier">float </span></dt><dd><p>Time by which the patient should receive an echocardiogram.</p>
+</dd>
+<dt>expected_gp_appointment_time<span class="classifier">float</span></dt><dd><p>Expected time until patient sees their GP.</p>
+</dd>
+<dt>expected_hospital_admission_time<span class="classifier">float</span></dt><dd><p>Expected time until patient is admitted to hospital.</p>
+</dd>
+<dt>expected_death_time<span class="classifier">float </span></dt><dd><p>Expected time until patient dies.</p>
+</dd>
+<dt>outpatient_echo<span class="classifier">bool</span></dt><dd><p>Boolean variable to identify if the patient has an outpatient echo.</p>
+</dd>
+<dt>inpatient_echo<span class="classifier">bool</span></dt><dd><p>Boolean variable to identify if the patient has an inpatient echo.</p>
+</dd>
+<dt>outpatient_queue_arrival_datetime: Any</dt><dd><p>Date and time that the patient joined the outpatient echo queue. Default to None.</p>
+</dd>
+<dt>outpatient_queue_exit_datetime: Any</dt><dd><p>Date and time that the patient left the outpatient echo queue.Default to None.</p>
+</dd>
+<dt>inpatient_queue_arrival_datetime: Any</dt><dd><p>Date and time that the patient joined the inpatient echo queue. Default to None.</p>
+</dd>
+<dt>inpatient_queue_exit_datetime: Any</dt><dd><p>Date and time that the patient left the inpatient echo queue. Default to None.</p>
+</dd>
+<dt>gp_appointment_datetime<span class="classifier">Any</span></dt><dd><p>Date and time that the patient saw their GP. Default to None.</p>
+</dd>
+<dt>hospital_admission_datetime<span class="classifier">Any</span></dt><dd><p>Date and time that the patient was admitted to hospital. Default to None.</p>
+</dd>
+<dt>death_datetime<span class="classifier">Any</span></dt><dd><p>Date and time that the patient died. Default to None.</p>
+</dd>
+<dt>echo_datetime<span class="classifier">Any</span></dt><dd><p>Date and time that the patient received an echocardiogram. Default to None.</p>
+</dd>
+<dt>echo_wait_time: Any</dt><dd><p>Time that the patient spent waiting for their echocardiogram. Default to None.</p>
+</dd>
+<dt>died_in_community: bool</dt><dd><p>Time and date that the patient died in the community. Default to False.</p>
+</dd>
+<dt>died_in_outpatient_queue: bool</dt><dd><p>Time and date that the patient died in the outpatient queue. Default to False.</p>
+</dd>
+<dt>died_in_inpatient_queue: bool</dt><dd><p>Time and date that the patient died in the inpatient queue. Default to False.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>arrival_datetime</strong></dt><dd></dd>
+<dt><strong>death_datetime</strong></dt><dd></dd>
+<dt><strong>echo_datetime</strong></dt><dd></dd>
+<dt><strong>echo_wait_time</strong></dt><dd></dd>
+<dt><strong>gp_appointment_datetime</strong></dt><dd></dd>
+<dt><strong>hospital_admission_datetime</strong></dt><dd></dd>
+<dt><strong>inpatient_queue_arrival_datetime</strong></dt><dd></dd>
+<dt><strong>inpatient_queue_exit_datetime</strong></dt><dd></dd>
+<dt><strong>outpatient_queue_arrival_datetime</strong></dt><dd></dd>
+<dt><strong>outpatient_queue_exit_datetime</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#patient.Patient.generate_age" title="patient.Patient.generate_age"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_age</span></code></a>()</p></td>
+<td><p>Generates patient age.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#patient.Patient.generate_attributes" title="patient.Patient.generate_attributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_attributes</span></code></a>(lockdown_status)</p></td>
+<td><p>Generates patient attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#patient.Patient.generate_echo_time_limit" title="patient.Patient.generate_echo_time_limit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_echo_time_limit</span></code></a>()</p></td>
+<td><p>Generates echo time limit for patient.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#patient.Patient.generate_expected_death_time" title="patient.Patient.generate_expected_death_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_expected_death_time</span></code></a>()</p></td>
+<td><p>Generates patient expected death time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#patient.Patient.generate_expected_gp_appointment_time" title="patient.Patient.generate_expected_gp_appointment_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_expected_gp_appointment_time</span></code></a>(...)</p></td>
+<td><p>Generates patient expected GP appointment time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#patient.Patient.generate_expected_hospital_admission_time" title="patient.Patient.generate_expected_hospital_admission_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_expected_hospital_admission_time</span></code></a>(...)</p></td>
+<td><p>Generates patient expected hospital admission time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#patient.Patient.generate_pro_BNP" title="patient.Patient.generate_pro_BNP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_pro_BNP</span></code></a>()</p></td>
+<td><p>Generates patient NT pro BNP result.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.age">
+<span class="sig-name descname"><span class="pre">age</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#patient.Patient.age" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.arrival_datetime">
+<span class="sig-name descname"><span class="pre">arrival_datetime</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.arrival_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.arrival_time">
+<span class="sig-name descname"><span class="pre">arrival_time</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#patient.Patient.arrival_time" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.death_datetime">
+<span class="sig-name descname"><span class="pre">death_datetime</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.death_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.died_in_community">
+<span class="sig-name descname"><span class="pre">died_in_community</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#patient.Patient.died_in_community" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.died_in_inpatient_queue">
+<span class="sig-name descname"><span class="pre">died_in_inpatient_queue</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#patient.Patient.died_in_inpatient_queue" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.died_in_outpatient_queue">
+<span class="sig-name descname"><span class="pre">died_in_outpatient_queue</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#patient.Patient.died_in_outpatient_queue" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.echo_datetime">
+<span class="sig-name descname"><span class="pre">echo_datetime</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.echo_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.echo_time_limit">
+<span class="sig-name descname"><span class="pre">echo_time_limit</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#patient.Patient.echo_time_limit" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.echo_wait_time">
+<span class="sig-name descname"><span class="pre">echo_wait_time</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.echo_wait_time" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.expected_death_time">
+<span class="sig-name descname"><span class="pre">expected_death_time</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#patient.Patient.expected_death_time" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.expected_gp_appointment_time">
+<span class="sig-name descname"><span class="pre">expected_gp_appointment_time</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#patient.Patient.expected_gp_appointment_time" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.expected_hospital_admission_time">
+<span class="sig-name descname"><span class="pre">expected_hospital_admission_time</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#patient.Patient.expected_hospital_admission_time" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="patient.Patient.generate_age">
+<span class="sig-name descname"><span class="pre">generate_age</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#patient.Patient.generate_age" title="Permalink to this definition"></a></dt>
+<dd><p>Generates patient age.</p>
+<p>This method generates the age of the patient.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="patient.Patient.generate_attributes">
+<span class="sig-name descname"><span class="pre">generate_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lockdown_status</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#patient.Patient.generate_attributes" title="Permalink to this definition"></a></dt>
+<dd><p>Generates patient attributes.</p>
+<p>This method generates the following patient attributes:</p>
+<p>– Age
+– NT pro BNP result
+– Expected time until the patient sees their GP.
+– Expected time until the patient is admitted to hospital.
+– Expected time until the patient dies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>lockdown_status</strong><span class="classifier">bool</span></dt><dd><p>Boolean variable indicating if it is currently a lockdown or not.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="patient.Patient.generate_echo_time_limit">
+<span class="sig-name descname"><span class="pre">generate_echo_time_limit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#patient.Patient.generate_echo_time_limit" title="Permalink to this definition"></a></dt>
+<dd><p>Generates echo time limit for patient.</p>
+<p>This method generates the time by which a patient should receive their echocardiogram.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="patient.Patient.generate_expected_death_time">
+<span class="sig-name descname"><span class="pre">generate_expected_death_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#patient.Patient.generate_expected_death_time" title="Permalink to this definition"></a></dt>
+<dd><p>Generates patient expected death time.</p>
+<p>This method generates the expected time until a patient dies.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="patient.Patient.generate_expected_gp_appointment_time">
+<span class="sig-name descname"><span class="pre">generate_expected_gp_appointment_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lockdown_status</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#patient.Patient.generate_expected_gp_appointment_time" title="Permalink to this definition"></a></dt>
+<dd><p>Generates patient expected GP appointment time.</p>
+<p>This method generates the expected time until a patient sees their GP.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="patient.Patient.generate_expected_hospital_admission_time">
+<span class="sig-name descname"><span class="pre">generate_expected_hospital_admission_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lockdown_status</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#patient.Patient.generate_expected_hospital_admission_time" title="Permalink to this definition"></a></dt>
+<dd><p>Generates patient expected hospital admission time.</p>
+<p>This method generates the expected time until a patient is admitted to 
+hospital.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="patient.Patient.generate_pro_BNP">
+<span class="sig-name descname"><span class="pre">generate_pro_BNP</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#patient.Patient.generate_pro_BNP" title="Permalink to this definition"></a></dt>
+<dd><p>Generates patient NT pro BNP result.</p>
+<p>This method generates the NT pro BNP result.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.gp_appointment_datetime">
+<span class="sig-name descname"><span class="pre">gp_appointment_datetime</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.gp_appointment_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.hospital_admission_datetime">
+<span class="sig-name descname"><span class="pre">hospital_admission_datetime</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.hospital_admission_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.inpatient_echo">
+<span class="sig-name descname"><span class="pre">inpatient_echo</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#patient.Patient.inpatient_echo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.inpatient_queue_arrival_datetime">
+<span class="sig-name descname"><span class="pre">inpatient_queue_arrival_datetime</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.inpatient_queue_arrival_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.inpatient_queue_exit_datetime">
+<span class="sig-name descname"><span class="pre">inpatient_queue_exit_datetime</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.inpatient_queue_exit_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.outpatient_echo">
+<span class="sig-name descname"><span class="pre">outpatient_echo</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#patient.Patient.outpatient_echo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.outpatient_queue_arrival_datetime">
+<span class="sig-name descname"><span class="pre">outpatient_queue_arrival_datetime</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.outpatient_queue_arrival_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.outpatient_queue_exit_datetime">
+<span class="sig-name descname"><span class="pre">outpatient_queue_exit_datetime</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#patient.Patient.outpatient_queue_exit_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.patient_id">
+<span class="sig-name descname"><span class="pre">patient_id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#patient.Patient.patient_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="patient.Patient.pro_BNP">
+<span class="sig-name descname"><span class="pre">pro_BNP</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#patient.Patient.pro_BNP" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, na.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
