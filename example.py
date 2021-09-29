@@ -132,7 +132,7 @@ plotting_parameters = {
                         "plotting_path": experiment_results_path, 
                         "patient_attribute": "age",
                         "save_flag": False,
-                        "show_flag": True,
+                        "show_flag": False,
                         "intervention_colour_dictionary": intervention_colour_dictionary
                      }
 
@@ -144,7 +144,7 @@ number_of_simulation_trials = 3
 
 # Run experiment.
 print("Started running simulations")
-experimenter.run_experiment(number_of_simulation_trials, development_flag=True)
+experimenter.run_experiment(number_of_simulation_trials, development_flag=False)
 
 # Analyse experiment.
 print("Started analysing simulations.")
