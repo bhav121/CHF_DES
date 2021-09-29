@@ -3,6 +3,7 @@
 
 ### VisualStudioCode ###
 .vscode/settings.json
+.chf_des/.vscode/settings.json
 
 
 ### VisualStudioCode Patch ###
