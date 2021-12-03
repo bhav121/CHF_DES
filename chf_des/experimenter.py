@@ -10,7 +10,7 @@ This module runs experiments. This involves:
     
 """
 ## Imports 
-import utilities 
+import utilities
 import multiprocessing as mp
 from plotter import Plotter
 

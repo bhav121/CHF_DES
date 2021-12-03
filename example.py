@@ -10,8 +10,9 @@ import os
 import sys
 from pathlib import Path
 
+__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 # Add chf_des directory to the path.
-sys.path.insert(0, os.getcwd() + "/chf_des/")
+sys.path.insert(0,__location__ + "/chf_des/")
 
 
 from chf_des.experimenter import Experimenter
@@ -22,7 +23,7 @@ warnings.filterwarnings("ignore")
 simulation_start_date = datetime.datetime.strptime("01/01/2018", "%d/%m/%Y")
 simulation_end_date = datetime.datetime.strptime("01/12/2022", "%d/%m/%Y")
 simulation_time = (simulation_end_date - simulation_start_date).days
-interarrival_time = 1/5
+interarrival_time = 1/6
 echo_test_time =(2/3)/24
 inpatient_test_capacity = 1
 outpatient_test_capacity = 1
@@ -109,7 +110,7 @@ experiment_results_path = results_dir_path + "experiment_" + str(1) + "/"
 
 # Create experiment results directory if it doesn't already exist.
 try:
-   os.mkdir(experiment_results_path)
+   os.makedirs(experiment_results_path)
 except:
    print("Directory already exists.")
 
@@ -131,8 +132,8 @@ plotting_parameters = {
                         "plotting_end_date": plotting_end_date,
                         "plotting_path": experiment_results_path, 
                         "patient_attribute": "age",
-                        "save_flag": False,
-                        "show_flag": False,
+                        "save_flag": True,
+                        "show_flag": True,
                         "intervention_colour_dictionary": intervention_colour_dictionary
                      }
 
@@ -144,11 +145,12 @@ number_of_simulation_trials = 3
 
 # Run experiment.
 print("Started running simulations")
-experimenter.run_experiment(number_of_simulation_trials, development_flag=False)
+experimenter.run_experiment(number_of_simulation_trials, development_flag=True)
 
 # Analyse experiment.
 print("Started analysing simulations.")
 experimenter.analyse_experiment()
 
 # Plot experiment.
+print("Started analysing simulations.")
 experimenter.plot_experiment(plotting_parameters)
